@@ -1,0 +1,5 @@
+servers:
+  - host: server1
+    ip: 10.0.0.1
+  - host: server2
+    ip: 10.0.0.2

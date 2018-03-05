@@ -1,0 +1,5 @@
+Hosts:
+{%- for server in servers %}
+  host: {{ server['host'] }}
+    ip: {{ server['ip'] }}
+{%- endfor -%}
