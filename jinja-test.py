@@ -7,7 +7,7 @@ import sys
 import time
 import yaml
 
-import filters.salt
+import filters
 
 # load pillar
 def load_pillar(pillar_file):
@@ -30,10 +30,14 @@ class JTest:
         self.env = jinja2.Environment(
                 loader = jinja2.FileSystemLoader(self.dir_path)
                 )
+        filters.tags.install(self.env)
+        filters.salt.install(self.env)
         self.template = self.env.get_template(template_file)
         print "Pillar data:\n\t %s" % pillar
         print "Template:"
         print self.template.render(pillar)
+
+
 
 
 def usage():

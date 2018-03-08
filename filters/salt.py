@@ -344,4 +344,21 @@ def symmetric_difference(lst1, lst2):
         return set(lst1) ^ set(lst2)
     return unique([ele for ele in union(lst1, lst2) if ele not in intersect(lst1, lst2)])
 
-
+def install(env):
+    env.filters['skip_filter'] = skip_filter
+    env.filters['ensure_sequence_filter'] = ensure_sequence_filter
+    env.filters['to_bool'] = to_bool
+    env.filters['quote'] = quote
+    env.filters['regex_escape'] = regex_escape
+    env.filters['regex_search'] = regex_search
+    env.filters['regex_match'] = regex_match
+    env.filters['regex_replace'] = regex_replace
+    env.filters['uuid_'] = uuid_
+    env.filters['unique'] = unique
+    env.filters['lst_min'] = lst_min
+    env.filters['lst_max'] = lst_max
+    env.filters['lst_avg'] = lst_avg
+    env.filters['union'] = union
+    env.filters['intersect'] = intersect
+    env.filters['difference'] = difference
+    env.filters['symmetric_difference'] = symmetric_difference
