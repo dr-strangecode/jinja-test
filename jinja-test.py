@@ -7,6 +7,8 @@ import sys
 import time
 import yaml
 
+import filters.salt
+
 # load pillar
 def load_pillar(pillar_file):
     with open(pillar_file, 'r') as stream:

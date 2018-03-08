@@ -1,3 +1,4 @@
 pillars/*.yaml
 templates/*.j2
 *.swp
+*.pyc
